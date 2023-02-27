@@ -1,8 +1,9 @@
-[{
-  "id": "1",
-  "name": "default",
-  "color": "black"
-},
+[
+  {
+    "id": "1",
+    "name": "default",
+    "color": "black"
+  },
 
   {
     "id": 2,
@@ -24,5 +25,4 @@
     "name": "vacation",
     "color": "yellow"
   }
-
 ]
