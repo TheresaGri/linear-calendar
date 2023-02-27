@@ -2,6 +2,9 @@ import express from "express";
 import { eventsRouter } from "./routers/events.js";
 import { categoriesRouter } from "./routers/categories.js";
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 
 const PORT = 3000;
 
