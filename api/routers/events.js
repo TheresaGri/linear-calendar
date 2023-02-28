@@ -120,4 +120,12 @@ eventsRouter.put("/:id", (req, res) => {
   res.json(newEvents);
 }); */
 
+eventsRouter.delete("/:id",(req,res) => {
+  const id = Number(req.params.id);
+  const events = JSON.parse(fs.readFileSync("./data/events.json"));
+  const filteredEvents = events.filter((event) => event.id !== id );
+  fs.writeFileSync("./data/events.json", JSON.stringify(filteredEvents));
+  res.json(filteredEvents);
+});
+
 export { eventsRouter };
