@@ -1,6 +1,6 @@
 [
   { "id": 1, "name": "default", "color": "black" },
   { "id": 2, "name": "chores", "color": "blue" },
-  { "id": 3, "name": "personal", "color": "green" },
+  { "name": "personal", "color": "grey", "id": 3 },
   { "id": 4, "name": "work", "color": "red" }
 ]

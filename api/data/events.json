@@ -1,1 +1,32 @@
-[{"id":1,"title":"do the laundry","date":{"day":24,"month":12,"year":2024,"hour":12,"minute":0},"categoryID":2},{"id":3,"title":"meeting","date":{"day":1,"month":4,"year":2023,"hour":10,"minute":0},"categoryID":4},{"id":4,"title":"meet parents","date":{"day":20,"month":3,"year":2023,"hour":12,"minute":0},"categoryID":3},{"id":5,"title":"go to the cinema","date":{"day":14,"month":2,"year":2023,"hour":19,"minute":0},"categoryID":3}]
+[
+  {
+    "id": 1,
+    "title": "do the laundry",
+    "date": { "day": 14, "month": 2, "year": 2023, "hour": 19, "minute": 0 },
+    "categoryID": 2
+  },
+  {
+    "id": 2,
+    "title": "go grocery shopping",
+    "date": { "day": 23, "month": 3, "year": 2023, "hour": 9, "minute": 0 },
+    "categoryID": 2
+  },
+  {
+    "id": 3,
+    "title": "meeting",
+    "date": { "day": 1, "month": 4, "year": 2023, "hour": 10, "minute": 0 },
+    "categoryID": 4
+  },
+  {
+    "title": "meet friends",
+    "date": { "day": 14, "month": 2, "year": 2023, "hour": 19, "minute": 0 },
+    "categoryID": 3,
+    "id": 4
+  },
+  {
+    "id": 5,
+    "title": "go to the cinema",
+    "date": { "day": 14, "month": 2, "year": 2023, "hour": 19, "minute": 0 },
+    "categoryID": 3
+  }
+]

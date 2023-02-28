@@ -91,39 +91,30 @@ eventsRouter.post("/", (req, res) => {
 
 eventsRouter.put("/:id", (req, res) => {
   let id = Number(req.params.id);
-  const newDate = req.body;
+  const newEvent = req.body;
   const events = JSON.parse(fs.readFileSync("./data/events.json"));
-  const newEvents = events.map((event) => {
-    if (event.id === id) {
-      event.date = newDate;
-      return event;
-    } else {
-      return event;
-    }
-  });
-  fs.writeFileSync("./data/events.json", JSON.stringify(newEvents));
+  const newEventIndex = events.findIndex((event) => event.id === id);
+  const eventId = events[newEventIndex].id;
+  events[newEventIndex] = { ...newEvent, id: eventId };
+  fs.writeFileSync("./data/events.json", JSON.stringify(events));
 });
 
-/* eventsRouter.patch("/:id", (req, res) => {
-  let id = req.params.id;
-  let urgency = req.body;
+eventsRouter.patch("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  let newData = req.body;
   const events = JSON.parse(fs.readFileSync("./data/events.json"));
-  let newEvents = events.map((event) => {
-    if (event.id === id) {
-      return { ...event, ...urgency };
-    } else {
-      return event;
-    }
-  });
+  let newEvents = events.map((event) =>
+    event.id === id ? { ...event, ...newData } : event
+  );
 
   fs.writeFileSync("./data/events.json", JSON.stringify(newEvents));
   res.json(newEvents);
-}); */
+});
 
-eventsRouter.delete("/:id",(req,res) => {
+eventsRouter.delete("/:id", (req, res) => {
   const id = Number(req.params.id);
   const events = JSON.parse(fs.readFileSync("./data/events.json"));
-  const filteredEvents = events.filter((event) => event.id !== id );
+  const filteredEvents = events.filter((event) => event.id !== id);
   fs.writeFileSync("./data/events.json", JSON.stringify(filteredEvents));
   res.json(filteredEvents);
 });
