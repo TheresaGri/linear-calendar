@@ -1,6 +1,28 @@
 [
-  { "id": 1, "name": "default", "color": "black" },
-  { "id": 2, "name": "chores", "color": "blue" },
-  { "name": "personal", "color": "grey", "id": 3 },
-  { "id": 4, "name": "work", "color": "red" }
+  {
+    "id": 1,
+    "name": "default",
+    "color": "black"
+  },
+
+  {
+    "id": 2,
+    "name": "chores",
+    "color": "blue"
+  },
+  {
+    "id": 3,
+    "name": "personal",
+    "color": "green"
+  },
+  {
+    "id": 4,
+    "name": "work",
+    "color": "red"
+  },
+  {
+    "id": 5,
+    "name": "vacation",
+    "color": "yellow"
+  }
 ]

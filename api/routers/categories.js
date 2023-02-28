@@ -57,15 +57,20 @@ categoriesRouter.patch("/:id", (req, res) => {
 
   res.json(newCategories);
 
-  fs.writeFileSync("./data/categories.json", JSON.stringify(newCategories))
-  
+  fs.writeFileSync("./data/categories.json", JSON.stringify(newCategories));
 });
 
 categoriesRouter.delete("/:id", (req, res) => {
   const id = Number(req.params.id);
-  const categories = JSON.parse(fs.readFileSync("./data/categories.json"));
+  let categories = JSON.parse(fs.readFileSync("./data/categories.json"));
   const filteredCategory = categories.filter((category) => category.id !== id);
-  fs.writeFileSync("./data/categories.json", JSON.stringify(filteredCategory));
+  if (id === 1) {
+    categories = categories;
+  } else {
+    categories = filteredCategory;
+  }
+
+  fs.writeFileSync("./data/categories.json", JSON.stringify(categories));
 });
 
 export { categoriesRouter };
