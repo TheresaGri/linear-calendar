@@ -65,6 +65,28 @@ eventsRouter.get("/", (req, res) => {
     );
   }
 
+  if (req.query["sortDates"] !== undefined) {
+    if (req.query["sortDates"] === "ascending") {
+      events.sort((a, b) => {
+        const dateA = new Date(
+          a.date.year,
+          a.date.month - 1,
+          a.date.day,
+          a.date.hour,
+          a.date.minute
+        );
+        const dateB = new Date(
+          b.date.year,
+          b.date.month - 1,
+          b.date.day,
+          b.date.hour,
+          b.date.minute
+        );
+        return dateA - dateB;
+      });
+    }
+  }
+
   res.json(events);
 });
 
