@@ -1,0 +1,9 @@
+.calendarEntries {
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+  border: black;
+}
+
+
+

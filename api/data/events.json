@@ -3,6 +3,7 @@
     "id": 1,
     "title": "do the laundry",
     "date": {
+      "dayOfWeek": "Sat",
       "day": 25,
       "month": 2,
       "year": 2023,
@@ -15,6 +16,7 @@
     "id": 2,
     "title": "go grocery shopping",
     "date": {
+      "dayOfWeek": "Thu",
       "day": 23,
       "month": 3,
       "year": 2023,
@@ -27,6 +29,7 @@
     "id": 3,
     "title": "meeting",
     "date": {
+      "dayOfWeek": "Sat",
       "day": 1,
       "month": 4,
       "year": 2023,
@@ -39,6 +42,7 @@
     "id": 4,
     "title": "meet parents",
     "date": {
+      "dayOfWeek": "Mon",
       "day": 20,
       "month": 3,
       "year": 2023,
@@ -51,6 +55,7 @@
     "id": 5,
     "title": "go to the cinema",
     "date": {
+      "dayOfWeek": "Thu",
       "day": 14,
       "month": 2,
       "year": 2023,

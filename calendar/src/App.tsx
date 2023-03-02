@@ -35,8 +35,6 @@ function App() {
     <div className="App">
       <Header handleMonthChange={handleMonthChange}></Header>
       <CalendarEntries month={monthNumber}></CalendarEntries>
-      <div>{month}</div>
-      <div>{monthNumber}</div>
     </div>
   );
 }
