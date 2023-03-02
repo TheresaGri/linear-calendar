@@ -24,26 +24,31 @@ export default function CalendarEntries({ month }: calendarProps) {
 
   const [events, setEvents] = useState<Event[]>([]);
 
-  useEffect (()=> {
+  useEffect(() => {
     async function loadData() {
       let data = await getCalendarEntries();
       setEvents(data);
     }
     loadData();
   }, []);
- 
 
   const deleteEvent = (id: number) => {
     setEvents(events.filter((event) => event.id !== id));
   };
-  console.log(events);
 
-  /* const changeTitle = (
-    id: number,
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    console.log(event.target.value);
-  }; */
+  const changeTitle = (id: number, e: React.ChangeEvent<HTMLInputElement>) => {
+    const newEvents = events.map((event) => {
+      if (event.id === id) {
+        return {
+          ...event,
+          title: e.target.value,
+        };
+      } else {
+        return event;
+      }
+    });
+    setEvents(newEvents);
+  };
 
   return (
     <div>
@@ -52,13 +57,14 @@ export default function CalendarEntries({ month }: calendarProps) {
           return (
             <div className="calendarEntries" key={event.id}>
               <p>
-                {event.date.dayOfWeek} {event.date.day}{" "}
+                {event.date.dayOfWeek} {event.date.day}
               </p>
-              {/* <p>{event.title}</p> */}
+
               <InputField
                 inputValue={event.title}
                 changeEvent={(e) => changeTitle(event.id, e)}
               ></InputField>
+
               <Button onPress={() => deleteEvent(event.id)}>delete</Button>
             </div>
           );
