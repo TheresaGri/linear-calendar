@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import CalendarEntries from "./components/CalendarEntries";
 import Header from "./components/Header";
+import Button from "./components/Button";
 
 function App() {
   const months: { month: string; value: number }[] = [
@@ -31,10 +32,18 @@ function App() {
     });
   };
 
+  const addNewEvent = () => {
+
+
+  }
+
   return (
     <div className="App">
+      <div className = "calendar">
+      <Button onPress = {() => addNewEvent()}>Add new event</Button>
       <Header handleMonthChange={handleMonthChange}></Header>
       <CalendarEntries month={monthNumber}></CalendarEntries>
+    </div>
     </div>
   );
 }

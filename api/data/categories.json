@@ -2,27 +2,27 @@
   {
     "id": 1,
     "name": "default",
-    "color": "black"
+    "color": "lightsalmon"
   },
 
   {
     "id": 2,
     "name": "chores",
-    "color": "blue"
+    "color": "lightblue"
   },
   {
     "id": 3,
     "name": "personal",
-    "color": "green"
+    "color": "lightgreen"
   },
   {
     "id": 4,
     "name": "work",
-    "color": "red"
+    "color": "lightred"
   },
   {
     "id": 5,
     "name": "vacation",
-    "color": "yellow"
+    "color": "lightpurple"
   }
 ]
